@@ -1,0 +1,133 @@
+body {
+    overflow-x: hidden;
+}
+
+.wrp {
+    min-width: 1200px;
+}
+
+.header {
+    background: rgb(7, 24, 42);
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.header a {
+    display: block;
+}
+
+.header .menu_wrap {
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .gnb>ul {
+
+    display: flex;
+    font-size: 21px;
+    gap: 40px;
+    color: #ffffff;
+    padding-left: 130px;
+}
+
+.header .gnb>ul>a {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+
+
+.header .top li {
+    display: flex;
+    font-size: 22px;
+    gap: 30px;
+    color: #ffffff;
+}
+
+.header .top li>a {
+    border: 3px solid #ffffff;
+    padding: 10px 10px 10px 10px;
+}
+
+/*  */
+
+
+.main_visual {
+    position: relative;
+
+    min-height: 1000px;
+    background: url(../img/main_visual_1920_summer.gif) no-repeat;
+}
+
+.main_visual .slogan {
+    position: absolute;
+    top: 25%;
+    left: 18%;
+
+}
+
+.main_visual .slogan p {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.main_visual .slogan h2 {
+    color: #ffffff;
+    margin: 20px 0 0px;
+    font-size: 45px;
+
+}
+
+
+.main_visual .right_arrow {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1300px;
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.main_visual .right_arrow span {
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.main_visual .right_arrow .right {
+    position: absolute;
+    left: 7%;
+    width: 100px;
+    height: 30px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.main_visual .right_arrow .right::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #fff;
+}
+
+.main_visual .right_arrow .right::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
