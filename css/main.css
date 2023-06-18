@@ -7,6 +7,7 @@ body {
 }
 
 .header {
+
     background: rgb(7, 24, 42);
     border-bottom: 1px solid #f2f2f2;
 }
@@ -37,12 +38,28 @@ body {
     white-space: nowrap;
 }
 
+.header .gnb>ul>li {
+    position: relative;
+    white-space: nowrap;
+    word-break: keep-all;
+}
 
+
+.header .gnb>ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    transform: translate(0, -50%);
+}
 
 .header .top li {
     display: flex;
     font-size: 22px;
-    gap: 30px;
+    gap: 10px;
     color: #ffffff;
 }
 
@@ -130,4 +147,440 @@ body {
     background: #fff;
     transform: rotate(45deg);
     transform-origin: right bottom;
+}
+
+/*여기서 부터 메인콘*/
+
+.main_content .tit h2 {
+
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-size: 35px;
+    color: #3b3b3d;
+
+}
+
+.main_content .tit p {
+
+    font-size: 16px;
+    text-align: center;
+    color: #6e6e6e;
+    padding-bottom: 7%;
+}
+
+.main_content .box {
+    height: 272px;
+    padding-top: 30px;
+    background: #f3f4f9;
+}
+
+.main_content .box ul {
+    padding-top: 5px;
+    overflow: hidden;
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main_content .box ul li {
+    float: left;
+    width: 33.333%;
+}
+
+
+.main_content .box ul li span {
+    display: block;
+    font-size: 30px;
+    color: #3b3b3d;
+    font-family: 'DakiB';
+}
+
+.main_content .box ul li a {
+    display: block;
+    width: 70.411%;
+    margin: 30px auto;
+    padding: 18px 0;
+    font-size: 16px;
+    color: #fff;
+    background: #3b3b3d;
+
+}
+
+
+.main_content .box ul li a:hover {
+    background: #e4007f;
+}
+
+.main_content .box ul li .white {
+    padding-top: 30px;
+    background: #fff;
+}
+
+.main_content .box ul li .white i {
+    display: block;
+    width: 70.411%;
+    height: 15px;
+    margin: 0 auto;
+    border: 2px solid #093968;
+    border-bottom: 0;
+}
+
+.main_content .box ul li .white h2 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #3b3b3d;
+}
+
+.main_content .box ul li .white p {
+    font-size: 14px;
+    color: #6e6e6e;
+    line-height: 1.5;
+}
+
+.main_content .tit h2 i {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 88px;
+    height: 2px;
+    margin-left: -44px;
+    background: #093968;
+}
+
+
+/*탭메뉴*/
+
+.tap_menu .tit h2 {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-size: 35px;
+    text-align: center;
+    color: #3b3b3d;
+    font-family: 'DakiB';
+}
+
+.tap_menu .tit h2 i {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 88px;
+    height: 2px;
+    margin-left: -44px;
+    background: #093968;
+}
+
+.tap_menu .tit p {
+    font-size: 16px;
+    color: #6e6e6e;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+
+.tap_menu .change_content figure {
+
+    display: block;
+}
+
+
+
+.tap_menu .box {
+    position: relative;
+    height: 600px;
+}
+
+
+.tap_menu .box .change_game {
+    position: absolute;
+    top: -15%;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #093968;
+}
+
+
+.tap_menu .box .change_game span {
+    right: 0;
+}
+
+.tap_menu .box .content_change {
+    position: absolute;
+    top: -15%;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.tap_menu .box .content_change span {
+    left: 0;
+}
+
+
+.tap_menu .box .color_change span.on {
+    background: white;
+    color: #093968;
+}
+
+
+.tap_menu .box .color_change span {
+    position: absolute;
+    top: 30px;
+    display: block;
+    width: 90px;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #fff;
+    background: #093968;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    -webkit-transition: background 500ms;
+    transition: background 500ms;
+
+}
+
+
+/* .tap_menu .box .color_change span:hover {
+    color: #3b3b3d;
+    background: #ffffff;
+}
+ */
+
+
+.change_game {}
+
+
+
+.tap_menu .change_content li {
+    height: 0;
+    overflow: hidden;
+
+}
+
+.tap_menu .change_content li.on {
+
+    height: auto;
+}
+
+
+
+.tap_menu .change_content figure img {
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+
+.tap_menu .change_content figure .transprent2 {}
+
+
+
+
+.tap_menu .change_content .white {
+    position: absolute;
+    font-size: 35px;
+    color: #fff;
+    line-height: 1.5;
+    top: 10%;
+    left: 20%;
+
+}
+
+
+.tap_menu .change_content .white2 {
+    position: absolute;
+    font-size: 35px;
+    color: #fff;
+    line-height: 1.5;
+    top: 30%;
+    left: 20%;
+
+}
+
+.tap_menu .change_content p {
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    top: 60%;
+    left: 20%;
+    font-size: 16px;
+    color: #ededed;
+    line-height: 1.5;
+    background: #093968;
+}
+
+
+
+.tap_menu .change_content .back {
+    position: relative;
+}
+
+.tap_menu .change_content .white3 {
+
+    position: absolute;
+    font-size: 35px;
+    color: #fff;
+
+    line-height: 1.5;
+    top: 10%;
+    left: 65%;
+
+
+
+}
+
+
+.tap_menu .change_content .blue2 {
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    top: 70%;
+    left: 62%;
+    font-size: 16px;
+    color: #ededed;
+    line-height: 1.5;
+    background: #093968;
+}
+
+
+
+
+
+.tap_menu .color_change .on {
+
+    background: #f2f2f2;
+    -webkit-transition: background 1000ms;
+    transition: background 1000ms;
+}
+
+/*세션3*/
+
+
+.shop_menu {
+    position: relative;
+    padding-bottom: 250px;
+}
+
+
+
+.shop_menu>div:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.shop_menu .tit h2 {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-size: 35px;
+    color: #3b3b3d;
+    text-align: center;
+    font-family: 'DakiB';
+}
+
+.shop_menu .tit h2 i {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 88px;
+    height: 2px;
+    margin-left: -44px;
+    background: #093968;
+}
+
+.shop_menu .tit p {
+    font-size: 16px;
+    color: #6e6e6e;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+
+.shop_menu .box {
+
+    position: relative;
+
+
+}
+
+.shop_menu .line1 {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    width: 10px;
+    height: 150px;
+    background: #093968;
+}
+
+
+/* .box2 img {
+    width: 100px;
+}
+ */
+
+.shop_menu .mok_slide {
+
+    position: absolute;
+    top: 17.5%;
+    left: 19.4%;
+    width: 81.795%;
+    height: 63.27%;
+    overflow: hidden;
+}
+
+.shop_menu .right {
+    position: absolute;
+    top: 17%;
+    left: 60%;
+
+}
+
+.shop_menu .right ul {
+    line-height: 70px;
+}
+
+.shop_menu .right ul span {
+    font-size: 18px;
+}
+
+.shop_menu .right ul p {
+    font-size: 14px;
+    color: #6e6e6e;
+}
+
+.shop_menu .box {
+    position: relative;
+}
+
+.shop_menu .slick-dots li {
+    display: inline-block;
+
+}
+
+.shop_menu .slick-dots li button {
+
+
+    line-height: 100px;
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0;
+    margin: 0 2px;
+
+    cursor: pointer;
+}
+
+.shop_menu .slick-dots li.slick-active button {
+    background: #333;
 }
