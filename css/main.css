@@ -155,16 +155,214 @@ body {
 
 /* 한번 스크롤 해봄*/
 
-.scroll_content1 {
+.aos_content1 {
     position: relative;
     display: block;
     color: #093968;
-    padding-bottom: 800px;
+    padding-bottom: 600px;
     /*밀어버린거 기억*/
 
 }
 
-.scroll_content1 span {
+.aos_content1 span {
+    position: absolute;
+    font-size: 140px;
+    width: 80%;
+    right: 20.3%;
+    top: 1%;
+    font-weight: 900;
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+    z-index: 1;
+    line-height: 1em;
+}
+
+.aos_content1 .white {
+
+    position: absolute;
+    left: 33.16%;
+    top: 1%;
+    color: #ffffff;
+
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.aos_content1 img {
+    float: right;
+    width: 65%;
+    position: relative;
+    transition: top 1.5s;
+}
+
+
+.box .tit p {
+
+    position: absolute;
+    font-size: 24px;
+    font-weight: 600;
+    top: 27%;
+
+
+}
+
+
+.box .tit_sub p {
+
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    top: 33%;
+
+
+}
+
+a.btn.wc {
+    position: absolute;
+    display: inline-block;
+    width: 145px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 3px solid #093968;
+    text-align: center;
+    line-height: 37px;
+    font-size: 16px;
+    color: #093968;
+    top: 44%;
+    letter-spacing: 2px;
+
+
+
+}
+
+
+a.btn.wc:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #093968;
+    transition: width 0.3s;
+}
+
+a.btn.wc:hover {
+    color: #fff;
+}
+
+a.btn.wc:hover:before {
+    z-index: -999;
+    width: 100%;
+}
+
+
+/*aos2*/
+
+.aos_content2 {
+    position: relative;
+    display: block;
+    color: #093968;
+    padding-bottom: 600px;
+    /*밀어버린거 기억*/
+
+}
+
+.aos_content2 span {
+    position: absolute;
+    font-size: 140px;
+    width: 80%;
+    left: 45.3%;
+    top: 19%;
+    font-weight: 900;
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+    z-index: 1;
+    line-height: 1em;
+}
+
+.aos_content2 .white {
+
+    position: absolute;
+    left: 45.3%;
+    top: 19%;
+    color: #ffffff;
+    width: 222.383px;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.aos_content2 img {
+    float: left;
+    width: 65%;
+    position: relative;
+    transition: top 1.5s;
+}
+
+
+.aos_content2 .box .tit p {
+
+    position: absolute;
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    left: 86%;
+    bottom: 51%;
+
+
+}
+
+
+.aos_content2 .box .tit_sub p {
+
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    width: 20%;
+    left: 84%;
+    bottom: 38%;
+
+
+}
+
+
+.aos_content2 a.btn.wc {
+    position: absolute;
+    display: inline-block;
+    width: 145px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 3px solid #093968;
+    text-align: center;
+    line-height: 37px;
+    font-size: 16px;
+    color: #093968;
+    bottom: 24%;
+    left: 90%;
+    letter-spacing: 2px;
+
+
+
+}
+
+/* aos3*/
+
+.aos_content3 {
+    position: relative;
+    display: block;
+    color: #093968;
+    padding-bottom: 550px;
+    /*밀어버린거 기억*/
+
+}
+
+.aos_content3 span {
     position: absolute;
     font-size: 140px;
     width: 80%;
@@ -178,7 +376,7 @@ body {
     line-height: 1em;
 }
 
-.scroll_content1 .white {
+.aos_content3 .white {
 
     position: absolute;
     left: 33.16%;
@@ -191,7 +389,7 @@ body {
 
 }
 
-.scroll_content1 img {
+.aos_content3 img {
     float: right;
     width: 65%;
     position: relative;
@@ -239,25 +437,6 @@ a.btn.wc {
 }
 
 
-a.btn.wc:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background: #093968;
-    transition: width 0.3s;
-}
-
-a.btn.wc:hover {
-    color: #fff;
-}
-
-a.btn.wc:hover:before {
-    z-index: -999;
-    width: 100%;
-}
 
 /*  */
 
@@ -363,6 +542,8 @@ a.btn.wc:hover:before {
     margin-left: -44px;
     background: #093968;
 }
+
+
 
 
 /*탭메뉴*/
