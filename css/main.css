@@ -68,6 +68,48 @@ body {
     padding: 10px 10px 10px 10px;
 }
 
+
+/* 한번 스크롤 해봄*/
+
+.scroll_content1 {
+    position: relative;
+    display: block;
+    color: #093968;
+
+}
+
+.scroll_content1 span {
+    position: absolute;
+    font-size: 140px;
+    right: 43.3%;
+    top: 20%;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 35px;
+    z-index: 1;
+    line-height: 1em;
+}
+
+.scroll_content1 .white {
+
+    position: absolute;
+    right: 43.3%;
+    top: 20%;
+    color: #ffffff;
+    z-index: 1;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.scroll_content1 img {
+
+    width: 100%;
+    position: relative;
+    transition: top 1.5s;
+}
+
 /*  */
 
 
@@ -76,6 +118,7 @@ body {
 
     min-height: 1000px;
     background: url(../img/main_visual_1920_summer.gif) no-repeat;
+    padding-bottom: 61%;
 }
 
 .main_visual .slogan {
@@ -583,4 +626,110 @@ body {
 
 .shop_menu .slick-dots li.slick-active button {
     background: #333;
+}
+
+
+
+/* footer */
+
+
+.footer {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #0e3055;
+}
+
+.footer .footer_box {
+    height: auto;
+    background: #093968;
+}
+
+
+.footer .box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.footer_box .box img {
+    position: absolute;
+    left: 19%;
+    top: 19px;
+}
+
+.footer .box:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+.footer .box .left {
+    float: left;
+    width: 30%;
+    padding: 30px 0 0 50px;
+    box-sizing: border-box;
+}
+
+
+
+.footer .box .right {
+    float: left;
+    width: 70%;
+    padding: 30px 0 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.footer .box .right ul {
+    float: left;
+    height: 170px;
+    margin-right: 50px;
+}
+
+
+
+
+.footer .box .right ul li {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #b0c0da;
+}
+
+.footer .box .right ul li {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #b0c0da;
+}
+
+
+
+.footer .box .right ul li a:hover {
+    color: #e4007f;
+}
+
+
+.footer .box .footer_txt {
+
+    width: 70%;
+    float: right;
+}
+
+.footer .box .footer_txt p {
+    font-size: 12px;
+    color: #b0c0da;
+    line-height: 1.5;
+}
+
+.footer_txt .left {
+    position: absolute;
+    right: 6%;
+
 }
