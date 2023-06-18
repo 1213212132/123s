@@ -69,48 +69,7 @@ body {
 }
 
 
-/* 한번 스크롤 해봄*/
 
-.scroll_content1 {
-    position: relative;
-    display: block;
-    color: #093968;
-
-}
-
-.scroll_content1 span {
-    position: absolute;
-    font-size: 140px;
-    right: 43.3%;
-    top: 20%;
-    font-weight: 900;
-    letter-spacing: -3px;
-    margin-bottom: 35px;
-    z-index: 1;
-    line-height: 1em;
-}
-
-.scroll_content1 .white {
-
-    position: absolute;
-    right: 43.3%;
-    top: 20%;
-    color: #ffffff;
-    z-index: 1;
-    height: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-
-}
-
-.scroll_content1 img {
-
-    width: 100%;
-    position: relative;
-    transition: top 1.5s;
-}
-
-/*  */
 
 
 .main_visual {
@@ -119,6 +78,7 @@ body {
     min-height: 1000px;
     background: url(../img/main_visual_1920_summer.gif) no-repeat;
     padding-bottom: 61%;
+    /*밀어버린거*/
 }
 
 .main_visual .slogan {
@@ -192,7 +152,118 @@ body {
     transform-origin: right bottom;
 }
 
+
+/* 한번 스크롤 해봄*/
+
+.scroll_content1 {
+    position: relative;
+    display: block;
+    color: #093968;
+    padding-bottom: 800px;
+    /*밀어버린거 기억*/
+
+}
+
+.scroll_content1 span {
+    position: absolute;
+    font-size: 140px;
+    width: 80%;
+    right: 20.3%;
+    top: 19%;
+    font-weight: 900;
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+    z-index: 1;
+    line-height: 1em;
+}
+
+.scroll_content1 .white {
+
+    position: absolute;
+    left: 33.16%;
+    top: 19%;
+    color: #ffffff;
+
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.scroll_content1 img {
+    float: right;
+    width: 65%;
+    position: relative;
+    transition: top 1.5s;
+}
+
+
+.box .tit p {
+
+    position: absolute;
+    font-size: 24px;
+    font-weight: 600;
+    bottom: 61%;
+
+
+}
+
+
+.box .tit_sub p {
+
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    bottom: 54%;
+
+
+}
+
+a.btn.wc {
+    position: absolute;
+    display: inline-block;
+    width: 145px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 3px solid #093968;
+    text-align: center;
+    line-height: 37px;
+    font-size: 16px;
+    color: #093968;
+    bottom: 44%;
+    letter-spacing: 2px;
+
+
+
+}
+
+
+a.btn.wc:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #093968;
+    transition: width 0.3s;
+}
+
+a.btn.wc:hover {
+    color: #fff;
+}
+
+a.btn.wc:hover:before {
+    z-index: -999;
+    width: 100%;
+}
+
+/*  */
+
 /*여기서 부터 메인콘*/
+
+
 
 .main_content .tit h2 {
 
