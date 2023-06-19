@@ -9,7 +9,18 @@ body {
 .header {
 
     background: rgb(7, 24, 42);
-    border-bottom: 1px solid #f2f2f2;
+
+    position: sticky;
+    top: 0;
+
+    border-bottom: 1px solid transparent;
+    z-index: 999;
+}
+
+
+.header.on {
+    background: #b0c0da;
+
 }
 
 .header a {
@@ -27,21 +38,24 @@ body {
 .header .gnb>ul {
 
     display: flex;
-    font-size: 21px;
+    font-size: 18px;
     gap: 40px;
     color: #ffffff;
     padding-left: 130px;
+
 }
 
 .header .gnb>ul>a {
-    font-size: 18px;
+    font-size: 16px;
     white-space: nowrap;
+
 }
 
 .header .gnb>ul>li {
     position: relative;
     white-space: nowrap;
     word-break: keep-all;
+    margin-right: 5%;
 }
 
 
@@ -49,7 +63,7 @@ body {
     content: "";
     position: absolute;
     top: 50%;
-    left: -20px;
+    left: -30px;
     width: 1px;
     height: 12px;
     background: #ddd;
@@ -58,15 +72,28 @@ body {
 
 .header .top li {
     display: flex;
-    font-size: 22px;
-    gap: 10px;
+    font-size: 16px;
+    gap: 30px;
     color: #ffffff;
 }
 
-.header .top li>a {
-    border: 3px solid #ffffff;
-    padding: 10px 10px 10px 10px;
+
+.header .top>li>a~a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 455px;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    transform: translate(0, -50%);
 }
+
+/* .header .top li>a {
+    border: 3px solid #ffffff;
+
+    padding: 10px 10px 10px 10px;
+} */
 
 
 
@@ -74,7 +101,7 @@ body {
 
 .main_visual {
     position: relative;
-
+    min-width: 100hv;
     min-height: 1000px;
     background: url(../img/main_visual_1920_summer.gif) no-repeat;
     padding-bottom: 61%;
@@ -101,6 +128,51 @@ body {
 
 }
 
+.main_visual a.btn {
+    position: absolute;
+    top: 45%;
+    left: 19%;
+}
+
+
+.main_visual a.btn.wc {
+    position: absolute;
+    display: inline-block;
+    width: 145px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 3px solid #fff;
+    text-align: center;
+    line-height: 37px;
+    font-size: 16px;
+    color: #fff;
+    top: 45%;
+    letter-spacing: 2px;
+    z-index: 999;
+
+
+}
+
+
+
+.main_visual a.btn.wc:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #093968;
+    transition: width 0.3s;
+    z-index: 1;
+}
+
+.main_visual a.btn.wc:hover {
+    color: #fff;
+}
+
+
+
 
 .main_visual .right_arrow {
     position: absolute;
@@ -122,7 +194,7 @@ body {
 
 .main_visual .right_arrow .right {
     position: absolute;
-    left: 7%;
+    left: 5%;
     width: 100px;
     height: 30px;
     text-align: right;
@@ -153,7 +225,7 @@ body {
 }
 
 
-/* 한번 스크롤 해봄*/
+/* 한번 aos 해봄*/
 
 .aos_content1 {
     position: relative;
@@ -181,7 +253,7 @@ body {
 .aos_content1 .white {
 
     position: absolute;
-    left: 33.16%;
+    left: 33.1%;
     top: 1%;
     color: #ffffff;
 
@@ -199,28 +271,29 @@ body {
 }
 
 
-.box .tit p {
+.aos_content1 .box .tit p {
 
     position: absolute;
     font-size: 24px;
     font-weight: 600;
     top: 27%;
+    left: 0.1%;
 
 
 }
 
 
-.box .tit_sub p {
+.aos_content1 .box .tit_sub p {
 
     position: absolute;
     font-size: 18px;
     font-weight: 400;
     top: 33%;
-
+    left: 0.1%;
 
 }
 
-a.btn.wc {
+.aos_content1 a.btn.wc {
     position: absolute;
     display: inline-block;
     width: 145px;
@@ -231,12 +304,14 @@ a.btn.wc {
     line-height: 37px;
     font-size: 16px;
     color: #093968;
-    top: 44%;
+    top: 47%;
+    left: 0.1%;
     letter-spacing: 2px;
 
 
 
 }
+
 
 
 a.btn.wc:before {
@@ -253,6 +328,12 @@ a.btn.wc:before {
 a.btn.wc:hover {
     color: #fff;
 }
+
+
+.aos_content3 .btn.wc:hover {
+    color: #fff;
+}
+
 
 a.btn.wc:hover:before {
     z-index: -999;
@@ -313,7 +394,7 @@ a.btn.wc:hover:before {
     font-weight: 600;
     width: 100%;
     left: 86%;
-    bottom: 51%;
+    top: 45%;
 
 
 }
@@ -326,7 +407,7 @@ a.btn.wc:hover:before {
     font-weight: 400;
     width: 20%;
     left: 84%;
-    bottom: 38%;
+    top: 52%;
 
 
 }
@@ -342,14 +423,17 @@ a.btn.wc:hover:before {
     text-align: center;
     line-height: 37px;
     font-size: 16px;
-    color: #093968;
-    bottom: 24%;
-    left: 90%;
+
+    top: 65%;
+    left: 91%;
     letter-spacing: 2px;
 
 
 
 }
+
+
+
 
 /* aos3*/
 
@@ -366,8 +450,8 @@ a.btn.wc:hover:before {
     position: absolute;
     font-size: 140px;
     width: 80%;
-    right: 20.3%;
-    top: 19%;
+    right: 17.3%;
+    top: 1%;
     font-weight: 900;
     letter-spacing: -3px;
 
@@ -379,7 +463,7 @@ a.btn.wc:hover:before {
 .aos_content3 .white {
 
     position: absolute;
-    left: 33.16%;
+    left: 31.16%;
     top: 19%;
     color: #ffffff;
 
@@ -397,28 +481,30 @@ a.btn.wc:hover:before {
 }
 
 
-.box .tit p {
+.aos_content3 .box .tit p {
 
     position: absolute;
     font-size: 24px;
     font-weight: 600;
-    bottom: 61%;
+    top: 30%;
+    left: 5.16%;
 
 
 }
 
 
-.box .tit_sub p {
+.aos_content3 .box .tit_sub p {
 
     position: absolute;
     font-size: 18px;
     font-weight: 400;
-    bottom: 54%;
+    top: 36%;
+    left: 5.16%;
 
 
 }
 
-a.btn.wc {
+.aos_content3 a.btn.wc {
     position: absolute;
     display: inline-block;
     width: 145px;
@@ -429,7 +515,8 @@ a.btn.wc {
     line-height: 37px;
     font-size: 16px;
     color: #093968;
-    bottom: 44%;
+    top: 47%;
+    left: 5.16%;
     letter-spacing: 2px;
 
 
@@ -487,7 +574,7 @@ a.btn.wc {
     display: block;
     font-size: 30px;
     color: #3b3b3d;
-    font-family: 'DakiB';
+
 }
 
 .main_content .box ul li a {
@@ -555,7 +642,7 @@ a.btn.wc {
     font-size: 35px;
     text-align: center;
     color: #3b3b3d;
-    font-family: 'DakiB';
+
 }
 
 .tap_menu .tit h2 i {
@@ -749,9 +836,10 @@ a.btn.wc {
 .tap_menu .color_change .on {
 
     background: #f2f2f2;
-    -webkit-transition: background 1000ms;
-    transition: background 1000ms;
+
 }
+
+
 
 /*세션3*/
 
@@ -776,7 +864,7 @@ a.btn.wc {
     font-size: 35px;
     color: #3b3b3d;
     text-align: center;
-    font-family: 'DakiB';
+
 }
 
 .shop_menu .tit h2 i {
@@ -835,6 +923,10 @@ a.btn.wc {
     top: 17%;
     left: 60%;
 
+}
+
+.shop_menu .touch img {
+    margin-left: 10px;
 }
 
 .shop_menu .right ul {
@@ -982,6 +1074,6 @@ a.btn.wc {
 
 .footer_txt .left {
     position: absolute;
-    right: 6%;
+    right: 7.5%;
 
 }
