@@ -126,7 +126,11 @@ body {
     margin: 20px 0 0px;
     font-size: 45px;
 
+
+
 }
+
+
 
 .main_visual a.btn {
     position: absolute;
@@ -613,6 +617,11 @@ a.btn.wc:hover:before {
     color: #3b3b3d;
 }
 
+
+
+
+
+
 .main_content .box ul li .white p {
     font-size: 14px;
     color: #6e6e6e;
@@ -629,6 +638,10 @@ a.btn.wc:hover:before {
     margin-left: -44px;
     background: #093968;
 }
+
+
+
+
 
 
 
@@ -722,8 +735,8 @@ a.btn.wc:hover:before {
     text-align: center;
     cursor: pointer;
     z-index: 2;
-    -webkit-transition: background 500ms;
-    transition: background 500ms;
+
+
 
 }
 
@@ -755,10 +768,12 @@ a.btn.wc:hover:before {
 .tap_menu .change_content figure img {
     position: relative;
     margin: 0 0 10px 0;
+
+
 }
 
+.tap_menu .change_content figure.om img {}
 
-.tap_menu .change_content figure .transprent2 {}
 
 
 
@@ -770,6 +785,7 @@ a.btn.wc:hover:before {
     line-height: 1.5;
     top: 10%;
     left: 20%;
+
 
 }
 
