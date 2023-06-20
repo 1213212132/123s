@@ -7,16 +7,25 @@
     <meta name="viewport" content="wilih=device-wilih, initial-scale=1.0">
     <title>kiwoompay</title>
 
+
+    <link rel="favicon" href="./favicon.ico">
+
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/main.css">
 
+
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/aos.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/smooth-scroll-m.js"></script>
     <script src="./js/kiwoom.js"></script>
 
 </head>
@@ -111,7 +120,7 @@
                         <p>IT금융 전문가의 결제</p>
                     </div>
                     <div class="tit_sub">
-                        <p class>매출과 직결되는 결제 네트워크<br>
+                        <p class>매출과 직결되는 결제 네트워크 <br>
                             다우키움 그룹의 IT & 금융 전문성에 맡기세요</p>
 
                     </div>
@@ -230,7 +239,7 @@
 
                             <li class="back">
                                 <figure>
-                                    <img src="./img/main_game_contents2.jpg" alt="" >
+                                    <img src="./img/main_game_contents2.jpg" alt="">
 
                                 </figure>
 
@@ -265,63 +274,58 @@
                 <div class="right">
                     <ul class="touch">
                         <li>
-                            <a href="">
-                                <span>매출 통계</span>
-                                <img src="./img/main03_arrow.png" alt="">
-                                <p>일별 거래금액과 건수 통계로 더 스마트한 상점 관리</p>
-                            </a>
+
+                            <span>매출 통계</span>
+                            <img src="./img/main03_arrow.png" alt="">
+                            <p>일별 거래금액과 건수 통계로 더 스마트한 상점 관리</p>
+
                         </li>
                         <li>
-                            <a href="">
-                                <span>정산 달력</span>
-                                <img src="./img/main03_arrow.png" alt="">
-                                <p>정확한 정산 스케쥴로 더 쉬워진 자금 관리</p>
-                            </a>
+
+                            <span>정산 달력</span>
+                            <img src="./img/main03_arrow.png" alt="">
+                            <p>정확한 정산 스케쥴로 더 쉬워진 자금 관리</p>
+
                         </li>
                         <li>
-                            <a href="">
-                                <span>거래 통계</span>
-                                <img src="./img/main03_arrow.png" alt="">
-                                <p>결제 수단별 결제금액 통계로 더 정확한 마케팅 계획</p>
-                            </a>
+
+                            <span>거래 통계</span>
+                            <img src="./img/main03_arrow.png" alt="">
+                            <p>결제 수단별 결제금액 통계로 더 정확한 마케팅 계획</p>
+
                         </li>
                         <li>
-                            <a href="">
-                                <span>매출 관리</span>
-                                <img src="./img/main03_arrow.png" alt="">
-                                <p>기간별 매출 분석으로 더 스마트한 매출 관리</p>
-                            </a>
+
+                            <span>매출 관리</span>
+                            <img src="./img/main03_arrow.png" alt="">
+                            <p>기간별 매출 분석으로 더 스마트한 매출 관리</p>
+
                         </li>
                     </ul>
                 </div>
 
-
-                <ul class="mok_slide">
-                    <li>
-                        <figure>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
                             <img src="./img/mock_img01.jpg" alt="">
-                        </figure>
+                        </div>
 
-                    </li>
-                    <li>
-                        <figure>
+                        <div class="swiper-slide">
                             <img src="./img/mock_img02.jpg" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
+                        </div>
+
+                        <div class="swiper-slide">
                             <img src="./img/mock_img03.jpg" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
+                        </div>
+                        <div class="swiper-slide">
                             <img src="./img/mock_img04.jpg" alt="">
-                        </figure>
-                    </li>
+                        </div>
 
-
-                </ul>
-
+                    </div>
+                </div>
 
             </section>
 
@@ -408,75 +412,6 @@
     </script>
 
 
-    <script>
-        var html = document.documentElement;
-        var body = document.body;
-
-        var scroller = {
-            target: document.querySelector("main"),
-            ease: 0.05, // <= scroll speed
-            endY: 0,
-            y: 0,
-            resizeRequest: 1,
-            scrollRequest: 0,
-        };
-
-        var requestId = null;
-
-        // TweenLite.set(scroller.target, {
-        //     rotation: 0,
-        //     force3D: true
-        // });
-
-        window.addEventListener("load", onLoad);
-
-        function onLoad() {
-            updateScroller();
-            window.focus();
-            window.addEventListener("resize", onResize);
-            document.addEventListener("scroll", onScroll);
-        }
-
-        function updateScroller() {
-
-            var resized = scroller.resizeRequest > 0;
-
-            if (resized) {
-                var height = scroller.target.clientHeight;
-                body.style.height = height + "px";
-                scroller.resizeRequest = 0;
-            }
-
-            var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
-
-            scroller.endY = scrollY;
-            scroller.y += (scrollY - scroller.y) * scroller.ease;
-
-            if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
-                scroller.y = scrollY;
-                scroller.scrollRequest = 0;
-            }
-
-            TweenLite.set(scroller.target, {
-                y: -scroller.y
-            });
-
-            requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
-        }
-
-        function onScroll() {
-            scroller.scrollRequest++;
-            if (!requestId) {
-                requestId = requestAnimationFrame(updateScroller);
-            }
-        }
-
-        function onResize() {
-            scroller.resizeRequest++;
-            if (!requestId) {
-                requestId = requestAnimationFrame(updateScroller);
-            }
-        }
     </script>
 </body>
 
